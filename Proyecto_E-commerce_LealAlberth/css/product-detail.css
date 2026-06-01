@@ -194,3 +194,52 @@ body {
   .detail-image { width: 100%; height: 300px; }
   .navbar { padding: 0 20px; }
 }
+
+/* ── FAVORITO EN DETALLE ── */
+#detailFavBtn {
+  padding: 15px 20px;
+  background: transparent;
+  color: #ff4d6d;
+  border: 1px solid #ff4d6d;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+#detailFavBtn.fav-active,
+#detailFavBtn:hover {
+  background: #ff4d6d;
+  color: #fff;
+}
+
+/* ── RATING EN DETALLE ── */
+#ratingBox { margin: 4px 0; }
+
+#ratingBox .rating-stars { display: flex; align-items: center; gap: 6px; }
+
+#ratingBox .star {
+  font-size: 26px;
+  cursor: pointer;
+  color: #444;
+  transition: color var(--transition), transform var(--transition);
+}
+
+#ratingBox .star.filled { color: #ffd700; }
+#ratingBox .star:hover  { color: #ffd700; transform: scale(1.2); }
+#ratingBox .rating-count { font-size: 13px; color: var(--muted); }
+
+/* ── STOCK BADGE EN DETALLE ── */
+.stock-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stock-badge.ok  { background: rgba(57,255,20,0.12);  color: #39ff14; }
+.stock-badge.low { background: rgba(255,165,0,0.12);  color: orange; }
+.stock-badge.out { background: rgba(255,85,85,0.12);  color: #ff5555; }

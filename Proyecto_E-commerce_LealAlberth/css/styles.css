@@ -493,3 +493,224 @@ body {
 }
 
 .hidden { display: none !important; }
+
+/* ── PRICE FILTER ── */
+#priceFilterWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+#priceFilterWrapper input {
+  width: 110px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 13px;
+  font-family: inherit;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+#priceFilterWrapper input:focus { border-color: var(--accent); }
+
+#applyPriceFilter {
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #0f0f0f;
+  border: none;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#clearPriceFilter {
+  padding: 10px 14px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── FAVORITES ── */
+#favButton {
+  padding: 10px 22px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+#favButton:hover { border-color: #ff4d6d; color: #ff4d6d; }
+
+.fav-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--muted);
+  transition: color var(--transition), transform var(--transition);
+  padding: 4px 8px;
+}
+
+.fav-btn.fav-active, .fav-btn:hover { color: #ff4d6d; transform: scale(1.2); }
+
+/* ── RATINGS ── */
+.rating-stars { display: flex; align-items: center; gap: 4px; margin: 8px 0; }
+
+.star {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--muted);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.star.filled { color: #ffd700; }
+.star:hover  { color: #ffd700; transform: scale(1.2); }
+
+.rating-count { font-size: 12px; color: var(--muted); margin-left: 6px; }
+
+/* ── QTY CONTROLS ── */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty-controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.qty-controls button:hover { background: var(--accent); border-color: var(--accent); color: #0f0f0f; }
+.qty-controls span { font-weight: 700; min-width: 20px; text-align: center; }
+
+/* ── COUPONS ── */
+#couponWrapper { margin: 12px 0; }
+
+.coupon-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+#couponInput {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  background: var(--surface2);
+  color: var(--text);
+  outline: none;
+  text-transform: uppercase;
+  transition: border-color var(--transition);
+}
+
+#couponInput:focus { border-color: var(--accent); }
+
+#applyCoupon {
+  padding: 10px 16px;
+  background: var(--accent);
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#couponMsg { font-size: 12px; font-weight: 600; }
+
+/* ── THEME TOGGLE ── */
+#themeToggle {
+  padding: 10px 18px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+#themeToggle:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── STOCK BADGES ── */
+.stock-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.stock-badge.ok  { background: rgba(57,255,20,0.12); color: var(--accent); }
+.stock-badge.low { background: rgba(255,165,0,0.12); color: orange; }
+.stock-badge.out { background: rgba(255,85,85,0.12); color: #ff5555; }
+
+/* ── CARD ACTIONS (botón carrito + favorito) ── */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 16px 16px;
+}
+
+.card-actions button:first-child {
+  flex: 1;
+  margin: 0;
+  padding: 11px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.card-actions button:first-child:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0f0f0f;
+}
+
+.card-rating {
+  font-size: 12px;
+  color: #ffd700;
+  font-weight: 700;
+  margin-top: 2px;
+}
