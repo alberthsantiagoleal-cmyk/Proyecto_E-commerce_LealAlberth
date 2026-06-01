@@ -714,3 +714,19 @@ body {
   font-weight: 700;
   margin-top: 2px;
 }
+
+/* ── BTN REPORTE ── */
+.btn-report {
+  padding: 10px 18px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.btn-report:hover { border-color: var(--accent); color: var(--accent); }

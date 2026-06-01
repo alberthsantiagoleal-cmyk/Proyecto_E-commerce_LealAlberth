@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte de Ventas — Flow Street</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="./sales-report.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="logo">Flow Street</h1>
+    <button class="btn-back" onclick="location.href='../index.html'">← Volver a la tienda</button>
+  </header>
+
+  <div class="report-wrapper">
+    <h2>Reporte de Ventas por Mes</h2>
+
+    <div class="report-filters">
+      <input type="number" id="reportYear" placeholder="Año" value="2025" min="2020" max="2099">
+      <select id="reportMonth">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3" selected>Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+      </select>
+      <button onclick="generateReport()">Generar reporte</button>
+    </div>
+
+    <div class="report-table-wrap">
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Valor total</th>
+          </tr>
+        </thead>
+        <tbody id="reportBody"></tbody>
+      </table>
+    </div>
+
+    <p class="report-summary" id="reportSummary"></p>
+  </div>
+
+  <script src="../js/seed.js"></script>
+  <script src="./sales-report.js"></script>
+  <script>generateReport();</script>
+
+</body>
+</html>
